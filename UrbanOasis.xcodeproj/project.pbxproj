@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		52D895F32CB7952E003A1DF6 /* UrbanOasisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D895F22CB7952E003A1DF6 /* UrbanOasisApp.swift */; };
-		52D895F52CB7952E003A1DF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D895F42CB7952E003A1DF6 /* ContentView.swift */; };
 		52D895F72CB79530003A1DF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D895F62CB79530003A1DF6 /* Assets.xcassets */; };
 		52D895FA2CB79530003A1DF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D895F92CB79530003A1DF6 /* Preview Assets.xcassets */; };
 		52D896042CB79530003A1DF6 /* UrbanOasisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D896032CB79530003A1DF6 /* UrbanOasisTests.swift */; };
 		52D8960E2CB79530003A1DF6 /* UrbanOasisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8960D2CB79530003A1DF6 /* UrbanOasisUITests.swift */; };
 		52D896102CB79530003A1DF6 /* UrbanOasisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8960F2CB79530003A1DF6 /* UrbanOasisUITestsLaunchTests.swift */; };
+		52D8961E2CB79BB4003A1DF6 /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8961D2CB79BB4003A1DF6 /* Hotel.swift */; };
+		52D896212CB79BE1003A1DF6 /* HotelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D896202CB79BE1003A1DF6 /* HotelListView.swift */; };
+		52D896232CB79C22003A1DF6 /* HotelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D896222CB79C22003A1DF6 /* HotelDetailView.swift */; };
+		52D896252CB79C6A003A1DF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D896242CB79C6A003A1DF6 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		52D895EF2CB7952E003A1DF6 /* UrbanOasis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanOasis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D895F22CB7952E003A1DF6 /* UrbanOasisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanOasisApp.swift; sourceTree = "<group>"; };
-		52D895F42CB7952E003A1DF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52D895F62CB79530003A1DF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52D895F92CB79530003A1DF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52D895FF2CB79530003A1DF6 /* UrbanOasisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrbanOasisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,10 @@
 		52D896092CB79530003A1DF6 /* UrbanOasisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrbanOasisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D8960D2CB79530003A1DF6 /* UrbanOasisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanOasisUITests.swift; sourceTree = "<group>"; };
 		52D8960F2CB79530003A1DF6 /* UrbanOasisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanOasisUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52D8961D2CB79BB4003A1DF6 /* Hotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
+		52D896202CB79BE1003A1DF6 /* HotelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListView.swift; sourceTree = "<group>"; };
+		52D896222CB79C22003A1DF6 /* HotelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailView.swift; sourceTree = "<group>"; };
+		52D896242CB79C6A003A1DF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,9 @@
 		52D895F12CB7952E003A1DF6 /* UrbanOasis */ = {
 			isa = PBXGroup;
 			children = (
+				52D8961F2CB79BCE003A1DF6 /* Views */,
+				52D8961C2CB79B9D003A1DF6 /* Models */,
 				52D895F22CB7952E003A1DF6 /* UrbanOasisApp.swift */,
-				52D895F42CB7952E003A1DF6 /* ContentView.swift */,
 				52D895F62CB79530003A1DF6 /* Assets.xcassets */,
 				52D895F82CB79530003A1DF6 /* Preview Content */,
 			);
@@ -125,6 +132,24 @@
 				52D8960F2CB79530003A1DF6 /* UrbanOasisUITestsLaunchTests.swift */,
 			);
 			path = UrbanOasisUITests;
+			sourceTree = "<group>";
+		};
+		52D8961C2CB79B9D003A1DF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52D8961D2CB79BB4003A1DF6 /* Hotel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52D8961F2CB79BCE003A1DF6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52D896202CB79BE1003A1DF6 /* HotelListView.swift */,
+				52D896222CB79C22003A1DF6 /* HotelDetailView.swift */,
+				52D896242CB79C6A003A1DF6 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D895F52CB7952E003A1DF6 /* ContentView.swift in Sources */,
+				52D8961E2CB79BB4003A1DF6 /* Hotel.swift in Sources */,
+				52D896232CB79C22003A1DF6 /* HotelDetailView.swift in Sources */,
+				52D896252CB79C6A003A1DF6 /* ContentView.swift in Sources */,
+				52D896212CB79BE1003A1DF6 /* HotelListView.swift in Sources */,
 				52D895F32CB7952E003A1DF6 /* UrbanOasisApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
