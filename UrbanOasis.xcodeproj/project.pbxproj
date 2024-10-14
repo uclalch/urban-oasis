@@ -17,6 +17,10 @@
 		52D896212CB79BE1003A1DF6 /* HotelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D896202CB79BE1003A1DF6 /* HotelListView.swift */; };
 		52D896232CB79C22003A1DF6 /* HotelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D896222CB79C22003A1DF6 /* HotelDetailView.swift */; };
 		52D896252CB79C6A003A1DF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D896242CB79C6A003A1DF6 /* ContentView.swift */; };
+		52D896272CBA414D003A1DF6 /* HotelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D896262CBA414D003A1DF6 /* HotelCardView.swift */; };
+		52D8962A2CBA4283003A1DF6 /* CornerRadiusHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D896292CBA4283003A1DF6 /* CornerRadiusHelper.swift */; };
+		52D8962D2CBA4501003A1DF6 /* HotelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8962C2CBA4501003A1DF6 /* HotelViewModel.swift */; };
+		52D8962F2CBA45C0003A1DF6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8962E2CBA45C0003A1DF6 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		52D896202CB79BE1003A1DF6 /* HotelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListView.swift; sourceTree = "<group>"; };
 		52D896222CB79C22003A1DF6 /* HotelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailView.swift; sourceTree = "<group>"; };
 		52D896242CB79C6A003A1DF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52D896262CBA414D003A1DF6 /* HotelCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCardView.swift; sourceTree = "<group>"; };
+		52D896292CBA4283003A1DF6 /* CornerRadiusHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusHelper.swift; sourceTree = "<group>"; };
+		52D8962C2CBA4501003A1DF6 /* HotelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewModel.swift; sourceTree = "<group>"; };
+		52D8962E2CBA45C0003A1DF6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,8 @@
 		52D895F12CB7952E003A1DF6 /* UrbanOasis */ = {
 			isa = PBXGroup;
 			children = (
+				52D8962B2CBA44EF003A1DF6 /* HotelViewModel */,
+				52D896282CBA4266003A1DF6 /* Helpers */,
 				52D8961F2CB79BCE003A1DF6 /* Views */,
 				52D8961C2CB79B9D003A1DF6 /* Models */,
 				52D895F22CB7952E003A1DF6 /* UrbanOasisApp.swift */,
@@ -145,11 +155,29 @@
 		52D8961F2CB79BCE003A1DF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				52D896202CB79BE1003A1DF6 /* HotelListView.swift */,
 				52D896222CB79C22003A1DF6 /* HotelDetailView.swift */,
+				52D896262CBA414D003A1DF6 /* HotelCardView.swift */,
+				52D896202CB79BE1003A1DF6 /* HotelListView.swift */,
 				52D896242CB79C6A003A1DF6 /* ContentView.swift */,
+				52D8962E2CBA45C0003A1DF6 /* MapView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		52D896282CBA4266003A1DF6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				52D896292CBA4283003A1DF6 /* CornerRadiusHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		52D8962B2CBA44EF003A1DF6 /* HotelViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52D8962C2CBA4501003A1DF6 /* HotelViewModel.swift */,
+			);
+			path = HotelViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,10 +311,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D8961E2CB79BB4003A1DF6 /* Hotel.swift in Sources */,
+				52D896272CBA414D003A1DF6 /* HotelCardView.swift in Sources */,
+				52D8962A2CBA4283003A1DF6 /* CornerRadiusHelper.swift in Sources */,
 				52D896232CB79C22003A1DF6 /* HotelDetailView.swift in Sources */,
 				52D896252CB79C6A003A1DF6 /* ContentView.swift in Sources */,
 				52D896212CB79BE1003A1DF6 /* HotelListView.swift in Sources */,
 				52D895F32CB7952E003A1DF6 /* UrbanOasisApp.swift in Sources */,
+				52D8962F2CBA45C0003A1DF6 /* MapView.swift in Sources */,
+				52D8962D2CBA4501003A1DF6 /* HotelViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UrbanOasis/Preview Content\"";
+				DEVELOPMENT_TEAM = 32Y8A5P252;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -478,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UrbanOasis/Preview Content\"";
+				DEVELOPMENT_TEAM = 32Y8A5P252;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
