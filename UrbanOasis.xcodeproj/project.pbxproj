@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5241550D2CBE293500ED32E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241550C2CBE293400ED32E3 /* User.swift */; };
+		524155122CBE98AF00ED32E3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 524155112CBE98AF00ED32E3 /* FirebaseAnalytics */; };
+		524155172CBE9DC100ED32E3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524155162CBE9DC100ED32E3 /* SignUpView.swift */; };
+		524155192CBE9E0600ED32E3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524155182CBE9E0600ED32E3 /* LoginView.swift */; };
+		5241551B2CBE9E4600ED32E3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241551A2CBE9E4600ED32E3 /* ProfileView.swift */; };
+		52A38A792CBE9F2200D57536 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 52A38A782CBE9F2200D57536 /* FirebaseAuth */; };
+		52A38A7B2CBE9F2200D57536 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 52A38A7A2CBE9F2200D57536 /* FirebaseFirestore */; };
+		52A38A7D2CBEA4A000D57536 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A38A7C2CBEA4A000D57536 /* GoogleService-Info.plist */; };
 		52D895F32CB7952E003A1DF6 /* UrbanOasisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D895F22CB7952E003A1DF6 /* UrbanOasisApp.swift */; };
 		52D895F72CB79530003A1DF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D895F62CB79530003A1DF6 /* Assets.xcassets */; };
 		52D895FA2CB79530003A1DF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D895F92CB79530003A1DF6 /* Preview Assets.xcassets */; };
@@ -41,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5241550C2CBE293400ED32E3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		524155162CBE9DC100ED32E3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		524155182CBE9E0600ED32E3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5241551A2CBE9E4600ED32E3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		52A38A7C2CBEA4A000D57536 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52D895EF2CB7952E003A1DF6 /* UrbanOasis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanOasis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D895F22CB7952E003A1DF6 /* UrbanOasisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanOasisApp.swift; sourceTree = "<group>"; };
 		52D895F62CB79530003A1DF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524155122CBE98AF00ED32E3 /* FirebaseAnalytics in Frameworks */,
+				52A38A792CBE9F2200D57536 /* FirebaseAuth in Frameworks */,
+				52A38A7B2CBE9F2200D57536 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +124,7 @@
 		52D895F12CB7952E003A1DF6 /* UrbanOasis */ = {
 			isa = PBXGroup;
 			children = (
+				52A38A7C2CBEA4A000D57536 /* GoogleService-Info.plist */,
 				52D8962B2CBA44EF003A1DF6 /* HotelViewModel */,
 				52D896282CBA4266003A1DF6 /* Helpers */,
 				52D8961F2CB79BCE003A1DF6 /* Views */,
@@ -148,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				52D8961D2CB79BB4003A1DF6 /* Hotel.swift */,
+				5241550C2CBE293400ED32E3 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,11 +173,14 @@
 		52D8961F2CB79BCE003A1DF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				524155182CBE9E0600ED32E3 /* LoginView.swift */,
+				524155162CBE9DC100ED32E3 /* SignUpView.swift */,
 				52D896222CB79C22003A1DF6 /* HotelDetailView.swift */,
 				52D896262CBA414D003A1DF6 /* HotelCardView.swift */,
 				52D896202CB79BE1003A1DF6 /* HotelListView.swift */,
-				52D896242CB79C6A003A1DF6 /* ContentView.swift */,
 				52D8962E2CBA45C0003A1DF6 /* MapView.swift */,
+				5241551A2CBE9E4600ED32E3 /* ProfileView.swift */,
+				52D896242CB79C6A003A1DF6 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +217,11 @@
 			dependencies = (
 			);
 			name = UrbanOasis;
+			packageProductDependencies = (
+				524155112CBE98AF00ED32E3 /* FirebaseAnalytics */,
+				52A38A782CBE9F2200D57536 /* FirebaseAuth */,
+				52A38A7A2CBE9F2200D57536 /* FirebaseFirestore */,
+			);
 			productName = UrbanOasis;
 			productReference = 52D895EF2CB7952E003A1DF6 /* UrbanOasis.app */;
 			productType = "com.apple.product-type.application";
@@ -268,6 +294,9 @@
 				Base,
 			);
 			mainGroup = 52D895E62CB7952E003A1DF6;
+			packageReferences = (
+				524155102CBE98AF00ED32E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 52D895F02CB7952E003A1DF6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,6 +315,7 @@
 			files = (
 				52D895FA2CB79530003A1DF6 /* Preview Assets.xcassets in Resources */,
 				52D895F72CB79530003A1DF6 /* Assets.xcassets in Resources */,
+				52A38A7D2CBEA4A000D57536 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,13 +341,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D8961E2CB79BB4003A1DF6 /* Hotel.swift in Sources */,
+				5241551B2CBE9E4600ED32E3 /* ProfileView.swift in Sources */,
 				52D896272CBA414D003A1DF6 /* HotelCardView.swift in Sources */,
+				524155172CBE9DC100ED32E3 /* SignUpView.swift in Sources */,
 				52D8962A2CBA4283003A1DF6 /* CornerRadiusHelper.swift in Sources */,
 				52D896232CB79C22003A1DF6 /* HotelDetailView.swift in Sources */,
 				52D896252CB79C6A003A1DF6 /* ContentView.swift in Sources */,
+				524155192CBE9E0600ED32E3 /* LoginView.swift in Sources */,
 				52D896212CB79BE1003A1DF6 /* HotelListView.swift in Sources */,
 				52D895F32CB7952E003A1DF6 /* UrbanOasisApp.swift in Sources */,
 				52D8962F2CBA45C0003A1DF6 /* MapView.swift in Sources */,
+				5241550D2CBE293500ED32E3 /* User.swift in Sources */,
 				52D8962D2CBA4501003A1DF6 /* HotelViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,6 +678,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		524155102CBE98AF00ED32E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		524155112CBE98AF00ED32E3 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 524155102CBE98AF00ED32E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		52A38A782CBE9F2200D57536 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 524155102CBE98AF00ED32E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		52A38A7A2CBE9F2200D57536 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 524155102CBE98AF00ED32E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52D895E72CB7952E003A1DF6 /* Project object */;
 }

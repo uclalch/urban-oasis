@@ -14,7 +14,7 @@ struct Hotel: Identifiable {
     var imageUrl: String
     var location: String
     var pricePerNight: Double
-//    var latitude: Double
-//    var longitude: Double
+    var latitude: Double
+    var longitude: Double
 }
 

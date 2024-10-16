@@ -8,8 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isUserLoggedIn = false
+
     var body: some View {
-        HotelListView()
+        NavigationView {
+            VStack(spacing: 20) {
+                if isUserLoggedIn {
+                    ProfileView()
+                } else {
+                    NavigationLink(destination: SignUpView()) {
+                        Text("Sign Up")
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            .padding(.horizontal)
+                    }
+
+                    NavigationLink(destination: LoginView(isUserLoggedIn: $isUserLoggedIn)) {
+                        Text("Log In")
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            .padding(.horizontal)
+                    }
+                }
+            }
+            .navigationTitle("Welcome to Urban Oasis")
+        }
     }
 }
 

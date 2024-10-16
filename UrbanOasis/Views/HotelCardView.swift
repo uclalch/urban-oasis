@@ -51,7 +51,7 @@ struct HotelCardView: View {
 
 struct HotelCardView_Previews: PreviewProvider {
     static var previews: some View {
-        HotelCardView(hotel: Hotel(name: "Luxury Beach Resort", description: "5-star beach resort with ocean views.", imageUrl: "hotel1", location: "Malibu, CA", pricePerNight: 499.99))
+        HotelCardView(hotel: Hotel(name: "Luxury Beach Resort", description: "5-star beach resort with ocean views.", imageUrl: "hotel1", location: "Malibu, CA", pricePerNight: 499.99, latitude: 34.0259, longitude: -118.7798))
             .frame(width: 350)
             .previewLayout(.sizeThatFits)
     }
