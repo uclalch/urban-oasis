@@ -7,11 +7,13 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var errorMessage = ""
+    @State private var navigateToMainPage = false
 
     var body: some View {
         VStack(spacing: 20) {
@@ -40,17 +42,21 @@ struct LoginView: View {
                     .foregroundColor(.red)
                     .padding()
             }
+
+            NavigationLink(destination: HotelListView(), isActive: $navigateToMainPage) {
+                EmptyView()
+            }
         }
         .navigationTitle("Log In")
     }
-    @Binding var isUserLoggedIn: Bool
+
     private func logIn() {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if let error = error {
                 errorMessage = error.localizedDescription
-                print("Error details: \(error.localizedDescription)")
             } else {
-                isUserLoggedIn = true // Update state to navigate
+                navigateToMainPage = true // Navigate only if login is successful
+                errorMessage = ""
             }
         }
     }

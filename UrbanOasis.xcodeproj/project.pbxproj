@@ -28,7 +28,7 @@
 		52D896272CBA414D003A1DF6 /* HotelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D896262CBA414D003A1DF6 /* HotelCardView.swift */; };
 		52D8962A2CBA4283003A1DF6 /* CornerRadiusHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D896292CBA4283003A1DF6 /* CornerRadiusHelper.swift */; };
 		52D8962D2CBA4501003A1DF6 /* HotelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8962C2CBA4501003A1DF6 /* HotelViewModel.swift */; };
-		52D8962F2CBA45C0003A1DF6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8962E2CBA45C0003A1DF6 /* MapView.swift */; };
+		52D8962F2CBA45C0003A1DF6 /* HotelMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8962E2CBA45C0003A1DF6 /* HotelMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,7 @@
 		52D896262CBA414D003A1DF6 /* HotelCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCardView.swift; sourceTree = "<group>"; };
 		52D896292CBA4283003A1DF6 /* CornerRadiusHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusHelper.swift; sourceTree = "<group>"; };
 		52D8962C2CBA4501003A1DF6 /* HotelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewModel.swift; sourceTree = "<group>"; };
-		52D8962E2CBA45C0003A1DF6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		52D8962E2CBA45C0003A1DF6 /* HotelMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +178,7 @@
 				52D896222CB79C22003A1DF6 /* HotelDetailView.swift */,
 				52D896262CBA414D003A1DF6 /* HotelCardView.swift */,
 				52D896202CB79BE1003A1DF6 /* HotelListView.swift */,
-				52D8962E2CBA45C0003A1DF6 /* MapView.swift */,
+				52D8962E2CBA45C0003A1DF6 /* HotelMapView.swift */,
 				5241551A2CBE9E4600ED32E3 /* ProfileView.swift */,
 				52D896242CB79C6A003A1DF6 /* ContentView.swift */,
 			);
@@ -350,7 +350,7 @@
 				524155192CBE9E0600ED32E3 /* LoginView.swift in Sources */,
 				52D896212CB79BE1003A1DF6 /* HotelListView.swift in Sources */,
 				52D895F32CB7952E003A1DF6 /* UrbanOasisApp.swift in Sources */,
-				52D8962F2CBA45C0003A1DF6 /* MapView.swift in Sources */,
+				52D8962F2CBA45C0003A1DF6 /* HotelMapView.swift in Sources */,
 				5241550D2CBE293500ED32E3 /* User.swift in Sources */,
 				52D8962D2CBA4501003A1DF6 /* HotelViewModel.swift in Sources */,
 			);

@@ -8,44 +8,47 @@
 import SwiftUI
 
 struct HotelListView: View {
-    @StateObject private var viewModel = HotelViewModel()
-    @State private var showMapView = false
+    @State private var searchText = ""
+    @ObservedObject var viewModel = HotelViewModel() // Using HotelViewModel to manage hotel data
 
     var body: some View {
         NavigationView {
             VStack {
-                Button(action: {
-                    showMapView.toggle()
-                }) {
-                    Text("View Hotels on Map")
-                        .font(.headline)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding()
-                .sheet(isPresented: $showMapView) {
-                    MapView(hotels: viewModel.hotels)
-                        .presentationDetents([.fraction(0.8)]) // Set the sheet height to 80%
-                        .presentationDragIndicator(.visible) // Show drag indicator to allow closing by dragging down
-                }
+                // Search bar
+                TextField("Search hotels...", text: $searchText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+                    .padding(.top)
 
-                ScrollView {
-                    LazyVStack(spacing: 20) {
-                        ForEach(viewModel.hotels) { hotel in
-                            NavigationLink(destination: HotelDetailView(hotel: hotel)) {
-                                HotelCardView(hotel: hotel)
-                                    .padding(.horizontal)
-                            }
-                            .buttonStyle(PlainButtonStyle())
+                // Hotel list filtered by search text
+                List {
+                    ForEach(viewModel.hotels.filter {
+                        searchText.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(searchText)
+                    }, id: \.id) { hotel in
+                        NavigationLink(destination: HotelDetailView(hotel: hotel)) {
+                            HotelCardView(hotel: hotel) // Use your existing HotelCardView
                         }
                     }
-                    .padding(.top, 20)
                 }
             }
             .navigationTitle("Urban Oasis Hotels")
-        }
+            .toolbar {
+                // Profile Button
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink(destination: ProfileView()) {
+                        Image(systemName: "person.crop.circle")
+                            .imageScale(.large)
+                    }
+                }
+                // Map Button
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: HotelMapView(hotels: viewModel.hotels)) { // Pass the hotel list to the map view
+                        Image(systemName: "map")
+                            .imageScale(.large)
+                    }
+                }
+            }
+        }.navigationBarBackButtonHidden(true) // Remove back button on login page after navigating to Main Page
     }
 }
 
@@ -55,4 +58,3 @@ struct HotelListView_Previews: PreviewProvider {
         HotelListView()
     }
 }
-

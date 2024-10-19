@@ -6,40 +6,39 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
 struct ContentView: View {
-    @State private var isUserLoggedIn = false
-
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                if isUserLoggedIn {
-                    ProfileView()
-                } else {
-                    NavigationLink(destination: SignUpView()) {
-                        Text("Sign Up")
-                            .font(.headline)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .padding(.horizontal)
-                    }
+                Text("Welcome to Urban Oasis")
+                    .font(.largeTitle)
+                    .padding()
 
-                    NavigationLink(destination: LoginView(isUserLoggedIn: $isUserLoggedIn)) {
-                        Text("Log In")
-                            .font(.headline)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .padding(.horizontal)
-                    }
+                NavigationLink(destination: SignUpView()) {
+                    Text("Sign Up")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.green)
+                        .cornerRadius(10)
+                        .padding(.horizontal)
                 }
-            }
-            .navigationTitle("Welcome to Urban Oasis")
+
+                NavigationLink(destination: LoginView()) {
+                    Text("Log In")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                        .padding(.horizontal)
+                }
+            }.navigationBarBackButtonHidden(true)
         }
     }
 }

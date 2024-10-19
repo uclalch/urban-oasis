@@ -15,6 +15,7 @@ struct SignUpView: View {
     @State private var username = ""
     @State private var userType: UserType = .customer
     @State private var errorMessage = ""
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
         VStack(spacing: 20) {
@@ -44,7 +45,7 @@ struct SignUpView: View {
                     .foregroundColor(.white)
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(Color.blue)
+                    .background(Color.green)
                     .cornerRadius(10)
                     .padding(.horizontal)
             }
@@ -61,29 +62,30 @@ struct SignUpView: View {
     private func signUp() {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
-                print("Error details: \(error.localizedDescription)")
                 errorMessage = error.localizedDescription
             } else {
-                // Save additional user data to Firestore
-                let userId = result?.user.uid ?? ""
-                let user = User(id: UUID(uuidString: userId) ?? UUID(), username: username, email: email, userType: userType)
-                saveUserToFirestore(user)
+                saveUserProfile()
+                dismiss() // Go back to Welcome Page after sign-up
             }
         }
     }
 
-    private func saveUserToFirestore(_ user: User) {
+    private func saveUserProfile() {
+        guard let currentUser = Auth.auth().currentUser else {
+            errorMessage = "User not logged in."
+            return
+        }
+
         let db = Firestore.firestore()
-        db.collection("users").document(user.id.uuidString).setData([
-            "username": user.username,
-            "email": user.email,
-            "userType": user.userType == .customer ? "customer" : "hotel"
+        let newUser = User(id: UUID(uuidString: currentUser.uid) ?? UUID(), username: username, email: email, userType: userType)
+
+        db.collection("users").document(currentUser.uid).setData([
+            "username": newUser.username,
+            "email": newUser.email,
+            "userType": newUser.userType == .customer ? "customer" : "hotel"
         ]) { error in
             if let error = error {
-                errorMessage = "Failed to save user: \(error.localizedDescription)"
-                print("Firestore write error: \(error.localizedDescription)")
-            } else {
-                print("User saved successfully!")
+                errorMessage = "Failed to save user profile: \(error.localizedDescription)"
             }
         }
     }

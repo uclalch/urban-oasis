@@ -17,23 +17,23 @@ struct ProfileView: View {
 
     var body: some View {
         VStack {
-            if let user = user {
-                Button(action: {
-                    navigateToHotelList = true
-                }) {
-                    Text("Go to Hotel List")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                }
-            }
-            NavigationLink(destination: HotelListView(), isActive: $navigateToHotelList) {
-                EmptyView()
-            }
+//            if let user = user {
+//                Button(action: {
+//                    navigateToHotelList = true
+//                }) {
+//                    Text("Go to Hotel List")
+//                        .font(.headline)
+//                        .foregroundColor(.white)
+//                        .padding()
+//                        .frame(maxWidth: .infinity)
+//                        .background(Color.blue)
+//                        .cornerRadius(10)
+//                        .padding(.horizontal)
+//                }
+//            }
+//            NavigationLink(destination: HotelListView(), isActive: $navigateToHotelList) {
+//                EmptyView()
+//            }
             NavigationView {
                 VStack {
                     if let user = user {
